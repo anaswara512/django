@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>userlist</title>
+</head>
+<style>
+    table,th,td{
+        border-collapse: collapse;
+    }
+</style>
+
+<body>
+<h1>userlist</h1>
+<table style="width: 100px;" border="1">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Address</th>
+    </tr>
+    {% for PersonForm in users %}
+    <tr>
+        <td>{{ PersonForm.firstname }}</td>
+        <td>{{ PersonForm.lastname }}</td>
+        <td>{{ PersonForm.email }}</td>
+        <td>{{ PersonForm.address }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
